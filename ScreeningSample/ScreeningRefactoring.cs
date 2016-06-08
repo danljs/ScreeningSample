@@ -11,7 +11,7 @@ namespace ScreeningSample
         {
             int OptionOne = 1, OptionTwo = 2;
 
-            //Step 0: Initial version
+            //@@@@@@@@@@@@@@Step 0: Initial version
             //if (!first)
             //{
             //    if (second)
@@ -51,7 +51,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true
 
-            //Step 1: Delete invalid case 2       
+            //@@@@@@@@@@@@@@Step 1: Delete invalid case 2       
             //if (!first)
             //{
             //    if (second)
@@ -87,7 +87,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true
 
-            //Step 2: Combine case 1 and case 3        
+            //@@@@@@@@@@@@@@Step 2: Combine case 1 and case 3        
             //if (!first)
             //{
             //    if (second)
@@ -116,7 +116,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true        
 
-            //Step 3: Combine case 1 and case 4        
+            //@@@@@@@@@@@@@@Step 3: Combine case 1 and case 4        
             //if (!first)
             //{
             //    return OptionOne;   // case	1: false true true
@@ -138,7 +138,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true
 
-            //Step 4: Reduce        
+            //@@@@@@@@@@@@@@Step 4: Reduce        
             //if (!first)
             //{
             //    return OptionOne;   // case	1: false true true
@@ -161,7 +161,7 @@ namespace ScreeningSample
 
             //return OptionOne;				// case 8: true true true      
 
-            //Step 5: Combine case 5, case 6 and case 7        
+            //@@@@@@@@@@@@@@Step 5: Combine case 5, case 6 and case 7        
             //if (!first)
             //{
             //    return OptionOne;   // case	1: false true true
@@ -174,7 +174,7 @@ namespace ScreeningSample
 
             //return OptionOne;				// case 8: true true true    
 
-            //Step 6: Simplify case 7        
+            //@@@@@@@@@@@@@@Step 6: Simplify case 7        
             //if (!first)
             //{
             //    return OptionOne;   // case	1: false true true
@@ -186,7 +186,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true    
 
-            //Step 7:  rewrite case 7
+            //@@@@@@@@@@@@@@Step 7:  rewrite case 7
             //if (first && (!third || !second))
             //{
             //    return OptionTwo;           // case 7: true true false
@@ -198,7 +198,7 @@ namespace ScreeningSample
             //}
             //return OptionOne;				// case 8: true true true
 
-            //Step 8:  reduce
+            //@@@@@@@@@@@@@@Step 8:  reduce
             //if (first && (!third || !second))
             //{
             //    return OptionTwo;           // case 7: true true false
@@ -208,7 +208,7 @@ namespace ScreeningSample
             //    return OptionOne;   // case	1: false true true
             //}
 
-            //Step 9:  Simplify				
+            //@@@@@@@@@@@@@@Step 9:  Simplify				
             return first && !third || first && !second ? OptionTwo : OptionOne;
 
         }

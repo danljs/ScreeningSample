@@ -17,7 +17,7 @@ namespace ScreeningSample
                 var sqlCommand = connection.CreateCommand();
                 sqlCommand.CommandText = GetAccountsSql;
                 sqlCommand.CommandType = CommandType.Text;
-                sqlCommand.Parameters.Add("@clientId", clientId);
+                sqlCommand.Parameters.AddWithValue("@clientId", clientId);
 
                 var reader = sqlCommand.ExecuteReader();
                 var accounts = new List<Account>();
