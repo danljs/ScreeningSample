@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace ScreeningSample
 {
-    public class DataStore
+    public class DataStore : IDataStore
     {
         public static string GetAccountsSql = "irrelevant query";
 

@@ -6,7 +6,14 @@ namespace ScreeningSample
 {
     public class AccountBl
     {
-        private readonly DataStore dataStore = new DataStore();
+        //private IDataStore dataStore = new DataStore();
+        private IDataStore dataStore1;
+        private IDataStore dataStore { get { return dataStore1 == null ? new DataStore() : dataStore1; } }
+
+        public void setDataStore(IDataStore ds)
+        {
+            dataStore1 = ds;
+        }
 
         public List<Account> GetInvestmentAccounts(int clientId, AccountType accountType)
         {
